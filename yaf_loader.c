@@ -823,15 +823,15 @@ PHP_METHOD(yaf_loader, autoload) {
 		}
 
 //add by liguangzhi
-		if (yaf_loader_is_category(class_name, class_name_len, "services", 8 TSRMLS_CC)) {
+		if (yaf_loader_is_category(class_name, class_name_len, YAF_LOADER_SERVICE_GZ, YAF_LOADER_LEN_SERVICE_GZ TSRMLS_CC)) {
 			/* this is a controller class */
-			spprintf(&directory, 0, "%s/%s", app_directory, "services");
-			file_name_len = class_name_len - separator_len - 8;
+			spprintf(&directory, 0, "%s/%s", app_directory, YAF_SERVICE_GZ_DIRECTORY_NAME);
+			file_name_len = class_name_len - separator_len - YAF_LOADER_LEN_SERVICE_GZ;
 
 			if (YAF_G(name_suffix)) {
 				file_name = estrndup(class_name, file_name_len);
 			} else {
-				file_name = estrdup(class_name + 8 + separator_len);
+				file_name = estrdup(class_name + YAF_LOADER_LEN_SERVICE_GZ + separator_len);
 			}
 
 			break;

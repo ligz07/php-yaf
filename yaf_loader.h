@@ -28,6 +28,7 @@
 #define YAF_MODULE_DIRECTORY_NAME     		"modules"
 #define YAF_VIEW_DIRECTORY_NAME       		"views"
 #define YAF_MODEL_DIRECTORY_NAME      		"models"
+#define YAF_SERVICE_GZ_DIRECTORY_NAME   	"services"
 
 #define YAF_SPL_AUTOLOAD_REGISTER_NAME 		"spl_autoload_register"
 #define YAF_AUTOLOAD_FUNC_NAME 				"autoload"
@@ -42,7 +43,9 @@
 #define YAF_LOADER_LEN_PLUGIN				6
 #define YAF_LOADER_RESERVERD				"Yaf_"
 #define YAF_LOADER_LEN_RESERVERD			3
-
+#define YAF_LOADER_SERVICE_GZ				"Service"
+#define YAF_LOADER_LEN_SERVICE_GZ			7
+  
 /* {{{ This only effects internally */
 #define YAF_LOADER_DAO						"Dao_"
 #define YAF_LOADER_LEN_DAO					4
